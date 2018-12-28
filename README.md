@@ -5,7 +5,8 @@ This is a simple pytorch implementation of [neural style transfer algorithm by G
 
     total loss = 0.0001 * content_loss+1000 * style_loss
 
-It is [often suggested](https://discuss.pytorch.org/t/pytorch-tutorial-for-neural-transfert-of-artistic-style/336/20?u=alexis-jacq) to use LBFGS algorithm for optimization. An excellent comparison of the optimization speed for different optimizers can be found [here](https://blog.slavv.com/picking-an-optimizer-for-style-transfer-86e7b8cba84b). In the next section we will see that even when optimizers achieve the same value of total loss, the results may differ significantly.
+It is [often suggested](https://discuss.pytorch.org/t/pytorch-tutorial-for-neural-transfert-of-artistic-style/336/20?u=alexis-jacq) to use LBFGS algorithm for optimization. An excellent comparison of the optimization speed for different optimizers can be found [here](https://blog.slavv.com/picking-an-optimizer-for-style-transfer-86e7b8cba84b). 
+In the next section we will see that even when optimizers achieve the same value of total loss, the results may differ significantly. The code is contained in "style_transfer.py".
 
 ## Comparison of optimizers
 #### 1. Content and style image have similar palette
