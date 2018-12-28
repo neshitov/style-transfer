@@ -15,7 +15,8 @@ FEATURE_LAYERS = [1, 6, 11, 20, 22, 29]
 # Layer to compute content cost
 CONTENT_LAYER = 22
 STYLE_WEIGHTS = {1: 0.5, 6: 1.0, 11: 1.5, 20: 3., 22: 0, 29: 4.}
-
+ALPHA=0.0001,
+BETA=1000
 
 if torch.cuda.is_available():
     device = 'cuda'
@@ -210,8 +211,8 @@ for epoch in range(6):
             image_LBFG,
             content_image,
             style_image,
-            alpha=0.0001,
-            beta=1000)
+            alpha=ALPHA,
+            beta=BETA)
         loss.backward(retain_graph=True)
         print('epoch:', epoch, ', loss_LBFG:', loss)
         save_loss = loss.item()
@@ -231,8 +232,8 @@ for epoch in range(401):
         image_Adam,
         content_image,
         style_image,
-        alpha=0.0001,
-        beta=1000)
+        alpha=ALPHA,
+        beta=BETA)
     print('epoch:', epoch, ', loss_Adam:', loss)
     loss.backward(retain_graph=True)
     scheduler.step(loss)
