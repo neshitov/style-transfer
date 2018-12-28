@@ -9,22 +9,23 @@ It is [often suggested](https://discuss.pytorch.org/t/pytorch-tutorial-for-neura
 
 ## Comparison of optimizers
 #### 1. Content and style image have similar palette
-    Content image:                                                 Style image:
-<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/church.jpg" width="20%"><img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/vangogh.jpg" width="20%">
+    Content image:                        Style image:
+
+<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/church.jpg" width="20%">      <img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/vangogh.jpg" width="20%">
 
 Results obtained after training with different optimizers and similar total loss:
 
-    Adam optimizer, loss=36:                                       LBFGS optimizer, loss=33:
+    Adam optimizer, loss=36:              LBFGS optimizer, loss=33:
 
 Although two algorithms achieve similar values of loss function, the image adjusted with Adam optimizer seems closer to the sytle image. The LBFGS algorithm shows a similar result when it achieves loss function equal to 22.
 
-<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/Adam-output-350epochs-loss36.62.png" width="40%"><img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/LBFG-output-4epochs-loss33.png" width="40%">
+<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/Adam-output-350epochs-loss36.62.png" width="40%"> <img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/LBFG-output-4epochs-loss33.png" width="40%">
 
 #### 2. Content image and style image have different palettes (images taken from [pytorch tutorial](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)):
 
-<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing.jpg" width="20%"><img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/picasso.jpg" width="20%">
+<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing.jpg" width="20%"> <img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/picasso.jpg" width="20%">
 
-    Adam optimizer, loss=15:                                        LBFGS optimizer, loss=15:
+    Adam optimizer, loss=15:              LBFGS optimizer, loss=15:
 
-<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-Adam-output-400epochs-loss14.46.png" width="40%"><img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-LBFG-output-5epochs-loss15.png" width="40%">
+<img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-Adam-output-400epochs-loss14.46.png" width="40%"> <img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-LBFG-output-5epochs-loss15.png" width="40%">
 Here we see that Adam optimizer picks more color from the style image.
