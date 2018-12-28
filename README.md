@@ -31,4 +31,4 @@ Although two algorithms achieve similar values of loss function, the image adjus
 <img style="float: left;" src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-Adam-output-400epochs-loss14.46.png" width="40%"> <img src="https://raw.githubusercontent.com/neshitov/style-transfer/master/dancing-LBFG-output-5epochs-loss15.png" width="40%">
 
 
-Here we see that Adam optimizer picks more color from the style image.
+Here we see that  Adam optimizer picks more color from the style image.
